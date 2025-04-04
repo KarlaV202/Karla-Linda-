@@ -1,45 +1,69 @@
 <!DOCTYPE html>
- <html lang="pt-br"> 
-    <head>
-         <meta charset="UTF-8"> 
-         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <link rel="stylesheet" href="assets/style.css"> 
-          <title>Flashcard</title> 
-        </head>
-         <body> 
-            <main> 
-                <section id="container">
-                     <article class="cartao">
-                         <div class="cartao__conteudo">
-                             <h3>Programação</h3>
-                              <div class="cartao__conteudo__pergunta">
-                                <p>O que é JavaScript?</p> 
-                            </div> 
-                            <div class="cartao__conteudo__resposta">
-                                 <p> O JavaScript é uma linguagem de programação</p>
-                                 </div>
-                                 </div>
-                                 </article> 
-                                </section> 
-                            </main> 
-                            <main>
-                                 <section id="container">
-                                     <article class="cartao">
-                                     </article>class="cartao"> 
-                                     <div class="cartao__conteudo">
-                                         <h3>Programação</h3>
-                                          <div class="cartao__conteudo__pergunta"> 
-                                            <p>O que é CSS?</p>
-                                         </div>
-                                          <div class="cartao__conteudo__resposta">
-                                             <p>O CSS é uma linguagem de estilização</p>
-                                        </div> 
-                                  </div>
-                     </article> 
-          </section> 
- </main>
-  <footer> 
-         <p>Projeto desenvolvido pela Alura, sem fins lucrativos</p> 
-      </footer> 
- </body>
- </html>
+<html>
+<head>
+    <title>Site com Senha</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        .container {
+            width: 800px;
+            margin: 40px auto;
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .titulo {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .imagem {
+            width: 100%;
+            height: 300px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+        .botao {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .botao:hover {
+            background-color: #3e8e41;
+        }
+        .senha {
+            width: 100%;
+            height: 30px;
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="titulo">Bem-vindo ao nosso site!</h1>
+        <input type="password" id="senha" class="senha" placeholder="Digite a senha">
+        <button class="botao" onclick="verificarSenha()">Entrar</button>
+        <div id="conteudo" style="display: none;">
+            <img class="imagem" src="https://www.google.com/search?q=cora%C3%A7ao+&sca_esv=daac018e050fc18e&udm=2&biw=1920&bih=956&ei=ZFXwZ-H1Iv7f1sQP-tywmAM&ved=0ahUKEwjht_eXr7-MAxX-r5UCHXouDDMQ4dUDCBE&uact=5&oq=cora%C3%A7ao+&gs_lp=EgNpbWciCWNvcmHDp2FvIDIKEAAYgAQYsQMYCjIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIGEAAYAxgKMgYQABgDGAoyBRAAGIAESLRMUKc-WJVKcAN4AJABAJgBdaAB5AaqAQMwLji4AQPIAQD4AQGYAgigAr4HqAIAwgIOEAAYgAQYsQMYgwEYigXCAggQABiABBixA8ICCxAAGIAEGLEDGIMBwgIKEAAYgAQYQxiKBcICBBAAGAPCAgcQABiABBgKmAMBkgcDMC44oAevKbIHAzAuOLgHvgc&sclient=img#vhid=rkvPsVkOF3oujM&vssid=mosaic" alt="Imagem de exemplo">
+            <p>Olhe o lindo coração</p>
+        </div>
+    </div>
+    <script>
+        function verificarSenha() {
+            var senha = document.getElementById("senha").value;
+            if (senha === "karlaj15_") {
+                document.getElementById("conteudo").style.display = "block";
+            } else {
+                alert("Senha incorreta!");
+            }
+        }
+    </script>
+</body>
+</html>
